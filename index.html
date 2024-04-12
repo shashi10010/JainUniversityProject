@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+       .user a {
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    background-color: #a766aa; /* Button color */
+    padding: 8px 16px; /* Adjust padding to fit */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Add some spacing between buttons */
+    transition: background-color 0.3s ease;
+}
+
+.user a:hover {
+    background-color: #ac32d1; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <img src="./travel-tourism-logo-isolated-on-white-background-vector.jpg" alt="Brand Logo">
+        <h1>TourTravel</h1>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book</a></li>
+            <li class="dropdown">
+                <a href="#">Packages</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">United States</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div class="user">
+        <a href="./login.html" target="_blank">Login</a>
+        <a href="./register.html" target="_blank">Register</a>
+    </div>
+</header>
+
+<div class="background-image">
+    <div class="overlay">
+        <h2>Welcome to TourTravel</h2>
+        <h1 id="countryName">Visit Placename</h1>
+        <button><a href="index2.html">Book Now</a></button>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

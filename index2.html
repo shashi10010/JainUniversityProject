@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+
+<!-- First section: Image and Form -->
+<section class="row">
+    <div class="half-width">
+        <img src="./tourcompany.jpg" alt="Brand Image">
+    </div>
+    <div class="half-width">
+        <form id="bookingForm" action="#" novalidate>
+            <label for="destination">Where to:</label>
+            <select id="destination" name="destination" required>
+                <option value="">Select a destination</option>
+                <option value="place1">Place 1</option>
+                <option value="place2">Place 2</option>
+                <option value="place3">Place 3</option>
+                <!-- Add more options as needed -->
+            </select><br>
+            <label for="persons">How Many Persons:</label>
+            <input type="number" id="persons" name="persons" min="1" required><br>
+            <label for="start">Start Date:</label>
+            <input type="date" id="start" name="start" min="" required><br>
+            <label for="end">End Date:</label>
+            <input type="date" id="end" name="end" min="" required><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="5" cols="30" minlength="50" maxlength="500" required></textarea><br>
+            <button type="submit" id="bookNowButton">Book Now</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById("start").addEventListener("change", function() {
+        // Set the minimum value for the end date input to be the selected start date
+        document.getElementById("end").min = this.value;
+    });
+
+    document.getElementById("bookNowButton").addEventListener("click", function(event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+        
+        // Check if all form fields are filled
+        var destination = document.getElementById("destination").value;
+        var persons = document.getElementById("persons").value;
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var description = document.getElementById("description").value;
+
+        if (destination && persons && start && end && description) {
+            // All fields are filled, show success message
+            alert("Booking successful");
+        } else {
+            // Not all fields are filled, show error message
+            alert("Please fill out all fields.");
+        }
+    });
+</script>
+
+
+<!-- Second section: Package Gallery -->
+<section class="row">
+    <!-- First Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./car.jpg" alt="Place 1">
+            <h3>Place 1</h3>
+            <p>Attractions of Place 1</p>
+            <p>Price: $100</p>
+            <p>Rating: 4.5</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Second Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./hot baloon.jpg" alt="Place 2">
+            <h3>Place 2</h3>
+            <p>Attractions of Place 2</p>
+            <p>Price: $150</p>
+            <p>Rating: 4.7</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Third Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./mountain.jpg" alt="Place 3">
+            <h3>Place 3</h3>
+            <p>Attractions of Place 3</p>
+            <p>Price: $120</p>
+            <p>Rating: 4.3</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Repeat this structure for more packages -->
+</section>
+
+<!-- Second section: Package Gallery -->
+<section class="row">
+    <!-- First Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./car.jpg" alt="Place 1">
+            <h3>Place 1</h3>
+            <p>Attractions of Place 1</p>
+            <p>Price: $100</p>
+            <p>Rating: 4.5</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Second Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./hot baloon.jpg" alt="Place 2">
+            <h3>Place 2</h3>
+            <p>Attractions of Place 2</p>
+            <p>Price: $150</p>
+            <p>Rating: 4.7</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Third Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./mountain.jpg" alt="Place 3">
+            <h3>Place 3</h3>
+            <p>Attractions of Place 3</p>
+            <p>Price: $120</p>
+            <p>Rating: 4.3</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Repeat this structure for more packages -->
+</section>
+
+<!-- Second section: Package Gallery -->
+<section class="row">
+    <!-- First Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./car.jpg" alt="Place 1">
+            <h3>Place 1</h3>
+            <p>Attractions of Place 1</p>
+            <p>Price: $100</p>
+            <p>Rating: 4.5</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Second Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./hot baloon.jpg" alt="Place 2">
+            <h3>Place 2</h3>
+            <p>Attractions of Place 2</p>
+            <p>Price: $150</p>
+            <p>Rating: 4.7</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Third Package -->
+    <div class="third-width">
+        <div class="card">
+            <img src="./mountain.jpg" alt="Place 3">
+            <h3>Place 3</h3>
+            <p>Attractions of Place 3</p>
+            <p>Price: $120</p>
+            <p>Rating: 4.3</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Repeat this structure for more packages -->
+</section>
+<!-- Services section -->
+<section class="row services">
+    <!-- Service 1: Affordable Hotel -->
+    <div class="third-width">
+        <div class="card">
+            <h3>Affordable Hotel</h3>
+            <p>Find budget-friendly accommodations for your trip.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- Service 2: Food & Drinks -->
+    <div class="third-width">
+        <div class="card">
+            <h3>Food & Drinks</h3>
+            <p>Explore local cuisines and beverages at your destination.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- Service 3: Safety Guide -->
+    <div class="third-width">
+        <div class="card">
+            <h3>Safety Guide</h3>
+            <p>Get tips and guidance on staying safe during your travels.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- Service 4: City Tours -->
+    <div class="third-width">
+        <div class="card">
+            <h3>City Tours</h3>
+            <p>Explore the city's landmarks and attractions with our guided tours.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- Service 5: Adventure Activities -->
+    <div class="third-width">
+        <div class="card">
+            <h3>Adventure Activities</h3>
+            <p>Experience thrilling adventure activities such as hiking, rafting, and more.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- Service 6: Transportation Services -->
+    <div class="third-width">
+        <div class="card">
+            <h3>Transportation Services</h3>
+            <p>Book reliable transportation options for seamless travel.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+</section>
+<script>
+    // JavaScript for Image Slider
+    const slides = document.querySelectorAll(".slide");
+    const sliderContainer = document.querySelector(".slider-container");
+
+    let index = 0;
+
+    function showSlide() {
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+        slides[index].style.display = "block";
+    }
+
+    function nextSlide() {
+        index++;
+        if (index >= slides.length) {
+            index = 0;
+        }
+        showSlide();
+    }
+
+    function prevSlide() {
+        index--;
+        if (index < 0) {
+            index = slides.length - 1;
+        }
+        showSlide();
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+</script>
+
+<!-- Gallery section -->
+<section class="row my-gallery">
+    <!-- Image 1 -->
+    <div class="third-width">
+        <div class="my-gallery-item">
+            <img src="./mountain.jpg" alt="Image 1" class="gallery-image">
+        </div>
+    </div>
+    <!-- Image 2 -->
+    <div class="third-width">
+        <div class="my-gallery-item">
+            <img src="./car.jpg" alt="Image 2" class="gallery-image">
+        </div>
+    </div>
+    <!-- Image 3 -->
+    <div class="third-width">
+        <div class="my-gallery-item">
+            <img src="./mountain.jpg" alt="Image 3" class="gallery-image">
+        </div>
+    </div>
+    <!-- Repeat this structure for more images -->
+</section>
+
+<!-- About Us section -->
+<section class="row about-us">
+    <!-- Left section with image -->
+    <div class="half-width">
+        <img src="./tourcompany.jpg" alt="Company Image">
+    </div>
+    <!-- Right section with company information -->
+    <div class="half-width">
+        <div class="company-info">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar suscipit justo, ac facilisis lacus mollis a. Nullam hendrerit risus eget ante sollicitudin, vel euismod nunc pellentesque. Vivamus nec convallis nulla. Nulla vitae leo nec massa vestibulum lacinia ut vel tortor. Integer eleifend tortor ac magna feugiat interdum. Nulla id orci eget lectus suscipit tempor. Nunc nec magna ut mi pretium fermentum. Donec vel tortor id sapien convallis dictum. Aenean eget purus consequat, faucibus justo nec, ullamcorper sapien. Integer lacinia volutpat eros, ac sodales orci facilisis sit amet. Nam vel malesuada ipsum.</p>
+            <p>Established: January 1, 20XX</p>
+            <!-- Add more company details here -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer section -->
+<footer class="footer">
+    <div class="brand">
+        <h3>TravelBooking</h3>
+    </div>
+    <div class="social-media">
+        <a href="#" class="icon"><img src="./instagram-icon.png" alt="Instagram"></a>
+        <a href="#" class="icon"><img src="./facebook-icon.png" alt="Facebook"></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 TravelBooking. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
